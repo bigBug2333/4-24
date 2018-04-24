@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>开始</button>
+    <button>清除</button>
+    <script>
+        var btn1 = document.querySelectorAll("button")[0];
+        var btn2 = document.querySelectorAll("button")[1];
+        
+        btn1.onclick = function () {
+            var timeId = setTimeout(function(){
+                alert("你死了");
+            }, 2000);
+        }
+        btn2.onclick = function () {
+            clearTimeout(timeId);
+        }
+    </script>
+</body>
+</html>
